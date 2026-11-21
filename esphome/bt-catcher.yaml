@@ -1,0 +1,19 @@
+substitutions:
+  name: bt-catcher
+  friendly_name: bt_catcher
+
+packages:
+  esphome.bluetooth-proxy: "github://esphome/bluetooth-proxies/esp32-generic/esp32-generic-s3.yaml@main"
+
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}
+
+api:
+  encryption:
+    key: "The_Real_Key"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
